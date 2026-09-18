@@ -138,6 +138,87 @@ a {
 .product-page.strawberry {
   background: #eedfd6;
 }
+.product-catalog-page {
+  position: relative;
+  padding: 9vw 8vw 86px;
+  background: #f3ecdf;
+}
+.catalog-heading {
+  position: absolute;
+  top: 11vw;
+  left: 8vw;
+  z-index: 2;
+  width: 30%;
+}
+.catalog-heading h2 {
+  margin: 0 0 24px;
+  font-size: clamp(50px, 6vw, 82px);
+}
+.catalog-heading > p:last-child {
+  max-width: 280px;
+  font: 14px/1.5 var(--sans);
+}
+.catalog-grid {
+  position: relative;
+  top: 13vw;
+  right: 8vw;
+  bottom: 72px;
+  display: grid;
+  width: 53%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.catalog-gallery {
+  position: absolute;
+  top: 11vw;
+  right: 7vw;
+  bottom: 68px;
+  display: grid;
+  width: 58%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 9px;
+}
+.catalog-gallery figure {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(39, 53, 44, 0.16);
+  border-radius: 9px;
+  background: #fbf8f1;
+  box-shadow: 0 7px 15px rgba(75, 54, 35, 0.08);
+}
+.catalog-gallery figure:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.catalog-gallery figure:nth-child(4) { grid-column: span 2; }
+.catalog-gallery figure:nth-child(7) { grid-row: span 2; }
+.catalog-gallery figure:nth-child(10) { grid-column: span 2; }
+.catalog-gallery img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.catalog-gallery figcaption { position: absolute; right: 7px; bottom: 6px; color: #fff; font: 8px var(--mono); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); }
+.catalog-gallery figure:hover img { transform: scale(1.04); transition: transform .35s ease; }
+.catalog-card {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+  gap: 7px 12px;
+  border-top: 1px solid rgba(39, 53, 44, 0.4);
+  padding-top: 10px;
+}
+.catalog-card > div {
+  position: relative;
+  grid-column: 1 / -1;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fbf8f1;
+}
+.catalog-card img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.catalog-card > div span { position: absolute; top: 8px; left: 9px; color: #fff; font: 9px var(--mono); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
+.catalog-card strong { font: 500 17px/1.05 var(--serif); }
+.catalog-card small { align-self: end; color: var(--clay); font: 10px var(--mono); white-space: nowrap; }
+.catalog-card:hover img { transform: scale(1.04); transition: transform .35s ease; }
 .steps-page {
   background: #e6d5c6;
 }
@@ -269,9 +350,9 @@ h2 i,
 .cover-illustration {
   position: absolute;
   z-index: 1;
-  top: 4%;
-  right: -3%;
-  width: min(39vw, 520px);
+  top: 7%;
+  right: 1%;
+  width: min(36vw, 480px);
   height: 300px;
   transform: rotate(-8deg);
 }
@@ -314,12 +395,15 @@ h2 i,
 .engagements-page {
   padding: 11vw 12vw 92px;
 }
+.contents-page {
+  padding-top: 7vw;
+}
 .section-heading h2 {
   margin: 0;
 }
 .contents-list {
   width: min(650px, 75vw);
-  margin-top: 5vw;
+  margin-top: 2.5vw;
 }
 .contents-list a {
   display: grid;
@@ -747,7 +831,8 @@ h2 i,
   .contents-page,
   .story-page,
   .steps-page,
-  .engagements-page {
+  .engagements-page,
+  .product-catalog-page {
     padding: 130px 25px 75px;
   }
   .contents-list {
@@ -757,6 +842,16 @@ h2 i,
   .contents-list strong {
     font-size: 17px;
   }
+  .catalog-heading { position: static; width: 100%; }
+  .catalog-heading h2 { font-size: 57px; }
+  .catalog-heading > p:last-child { font-size: 13px; }
+  .catalog-grid { top: 315px; right: 25px; bottom: 70px; left: 25px; width: auto; gap: 9px; }
+  .catalog-gallery { top: 315px; right: 25px; bottom: 70px; left: 25px; width: auto; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(4, 1fr); gap: 6px; }
+  .catalog-gallery figure:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+  .catalog-gallery figure:nth-child(4), .catalog-gallery figure:nth-child(10) { grid-column: span 2; }
+  .catalog-card { gap: 5px 8px; }
+  .catalog-card strong { font-size: 13px; }
+  .catalog-card small { font-size: 8px; }
   .story-body {
     width: 93%;
     margin: 55px 0 0 7%;
