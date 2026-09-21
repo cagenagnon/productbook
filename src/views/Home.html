@@ -1,42 +1,137 @@
 <main class="book">
   <div class="book-pages">
     <nav class="topbar flex items-center justify-between px-[5vw] py-5 md:py-7">
-      <a class="brand" href="#cover" aria-label="Retour à la couverture"><img src="/logo/logo crèpière (2).png" alt="La Crêpière Enagnon"></a>
-      <div class="topbar-meta flex items-center gap-3 md:gap-7"><span class="hidden md:inline">Cotonou · Bénin</span><button class="order-btn" data-target="closing">Commander <span>↗</span></button></div>
+      <a class="brand" href="#cover" aria-label="Retour à la couverture"><img src="/logo/logo crèpière (2).png"
+          alt="La Crêpière Enagnon"></a>
+      <div class="topbar-meta flex items-center gap-3 md:gap-7"><span class="hidden md:inline">Cotonou ·
+          Bénin</span><button class="order-btn" data-target="closing">Commander <span>↗</span></button></div>
     </nav>
 
     <section class="page cover-page bg-[#f5efe5]" id="cover" data-page="01">
-      <div class="cover-wash wash-one"></div><div class="cover-wash wash-two"></div>
+      <div class="cover-wash wash-one"></div>
+      <div class="cover-wash wash-two"></div>
       <div class="cover-top flex justify-between"><span>Collection 2026</span></div>
       <div class="cover-main relative z-1 mx-auto flex w-[88%] flex-col items-start justify-center">
-        <p class="eyebrow">La Crêpière <span>Enagnon</span></p><h1>Nos créations,<br><i>une à une.</i></h1>
+        <p class="eyebrow">La Crêpière <span>Enagnon</span></p>
+        <h1>Nos créations,<br><i>une à une.</i></h1>
         <div class="cover-illustration">{{COVER_VISUAL}}</div>
-        <div class="cover-offer"><span class="offer-kicker">Bien plus qu'une crêpe</span><strong>Le goût qui rassemble<br><i>vos événements.</i></strong><span class="offer-detail">Anniversaire · mariage · chill · rencontres professionnelles</span></div>
+        <div class="cover-offer"><span class="offer-kicker">Bien plus qu'une crêpe</span><strong>Le goût qui
+            rassemble<br><i>vos événements.</i></strong><span class="offer-detail">Anniversaire · mariage · chill ·
+            rencontres professionnelles</span></div>
       </div>
-      <div class="cover-bottom"><p>Le mot « crêpe » vient du latin <i>crispus</i>,<br>qui signifie « ondulé ».</p></div>
+      <div class="cover-bottom">
+        <p>Le mot « crêpe » vient du latin <i>crispus</i>,<br>qui signifie « ondulé ».</p>
+      </div>
     </section>
 
     <section class="page contents-page bg-[#e5eadb]" id="sommaire" data-page="02">
-      <div class="page-no">02</div><div class="section-heading"><p class="eyebrow">À feuilleter doucement</p><h2>Sommaire</h2></div>
-      <div class="contents-list">{{CONTENTS}}</div><p class="contents-quote">“ Un product book, comme un vrai livre :<br>on le feuillette, on ne le scrolle pas. ”</p>
+      <div class="page-watermark" aria-hidden="true"><img class="wm-photo wm-photo-a" src="/images/product2.jpeg"
+          alt=""><span class="wm-word wm-word-a">Crêpière</span></div>
+      <div class="section-heading">
+        <h2>Sommaire</h2>
+      </div>
+      <div class="contents-list">{{CONTENTS}}</div>
+      <p class="contents-quote">“ Un product book, comme un vrai livre :<br>on le feuillette, on ne le scrolle pas. ”
+      </p>
     </section>
 
     <section class="page story-page bg-[#d4dcca]" id="story" data-page="03">
-      <div class="page-no">03</div><div class="story-intro"><p class="eyebrow">À propos de nous</p><h2>Une crêpe<br><i>à votre rythme.</i></h2></div>
-      <div class="story-body"><p>Née à Cotonou, <strong>La Crêpière Enagnon</strong> est un atelier 100% en ligne, pensé pour un seul objectif : servir une crêpe aussi belle que gourmande, préparée à la commande, jamais à l'avance.</p><p>Pas de boutique physique — seulement des crêpes fraîches, cuisinées avec soin et livrées où que vous soyez, encore tièdes.</p></div>
-      <div class="story-event"><span>Pour vos moments</span><strong>On s'invite<br>à vos <i>événements.</i></strong><p>Une animation gourmande pensée pour vos anniversaires, mariages, moments chill et rencontres professionnelles.</p></div>
-      <div class="story-stats"><div><span>⌖</span><strong>Cotonou<br>· Bénin</strong></div><div><span>♨</span><strong>Préparées<br>à la commande</strong></div><div><span>⌁</span><strong>Livrées où<br>que vous soyez</strong></div></div><p class="page-quote">“ Cotonou, Bénin — une crêpière, un four,<br>et beaucoup d'amour du détail. ”</p>
+      <div class="page-watermark" aria-hidden="true"><svg class="wm-swirl wm-swirl-a" viewBox="0 0 200 200" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 20c50 0 80 40 80 80s-40 80-80 80-80-35-80-75c0-30 25-50 50-45 20 4 30 21 20 36"
+            stroke="currentColor" stroke-width="1.4" />
+        </svg></div>
+      <div class="story-intro">
+        <!-- <p class="eyebrow">À propos de nous</p> -->
+        <h2>Une crêpe<br><i>à votre rythme.</i></h2>
+      </div>
+      <img class="story-photo" src="/images/product4.jpeg" alt="Crêpe gourmande préparée par La Crêpière Enagnon">
+      <div class="story-body">
+        <p>Née à Cotonou, <strong>La Crêpière Enagnon</strong> est un atelier 100% en ligne, pensé pour un seul objectif
+          : servir une crêpe aussi belle que gourmande, préparée à la commande, jamais à l'avance.</p>
+        <p>Pas de boutique physique — seulement des crêpes fraîches, cuisinées avec soin et livrées où que vous soyez,
+          encore tièdes.</p>
+      </div>
+      <div class="story-event"><span>Pour vos moments</span><strong>On s'invite<br>à vos <i>événements.</i></strong>
+        <p>Une animation gourmande pensée pour vos anniversaires, mariages, moments chill et rencontres
+          professionnelles.</p>
+      </div>
+      <div class="story-stats">
+        <div><span>⌖</span><strong>Cotonou<br>· Bénin</strong></div>
+        <div><span>♨</span><strong>Préparées<br>à la commande</strong></div>
+        <div><span>⌁</span><strong>Livrées où<br>que vous soyez</strong></div>
+      </div>
+      <p class="page-quote">“ Cotonou, Bénin — une crêpière, un four,<br>et beaucoup d'amour du détail. ”</p>
     </section>
 
-    <section class="page product-catalog-page bg-[#f3ecdf]" id="catalog" data-page="04"><div class="page-no">04</div><div class="catalog-heading"><p class="eyebrow">À découvrir, une à une</p><h2>Nos créations<br><i>gourmandes.</i></h2><p>Des recettes préparées à la commande, pour une pause en solo ou un moment à partager.</p></div><div class="catalog-gallery">{{PRODUCT_CATALOG}}</div></section>
-    <section class="page events-page bg-[#e9dfd0]" id="events" data-page="05"><div class="page-no">05</div><div class="events-heading"><p class="eyebrow">Pour vos moments à partager</p><h2>Nos formules<br><i>événements.</i></h2><p>Des plateaux généreux et des assortiments pensés pour vos anniversaires, mariages, pauses d'équipe et rencontres professionnelles.</p></div><div class="events-gallery">{{EVENTS}}</div></section>
+    <section class="page product-catalog-page bg-[#f3ecdf]" id="catalog" data-page="04">
+      <div class="catalog-heading">
+        <p class="eyebrow">À découvrir, une à une</p>
+        <h2>Nos créations<br><i>gourmandes.</i></h2>
+        <p>Des recettes préparées à la commande, pour une pause en solo ou un moment à partager.</p>
+      </div>
+      <div class="catalog-gallery">{{PRODUCT_CATALOG}}</div>
+    </section>
+    <section class="page events-page events-page-alt bg-[#e9dfd0]" id="events" data-page="05">
+      <div class="events-heading">
+        <p class="eyebrow">Pour vos moments à partager</p>
+        <h2>Nos formules<br><i>événements.</i></h2>
+        <p>Des plateaux généreux et des assortiments pensés pour vos anniversaires, mariages, pauses d'équipe et
+          rencontres professionnelles.</p>
+      </div>
+      <div class="events-gallery">{{EVENTS}}</div>
+    </section>
 
     {{PRODUCTS}}
 
-    <section class="page steps-page bg-[#e6d5c6]" id="steps" data-page="10"><div class="page-no">10</div><div class="section-heading"><p class="eyebrow">Simple comme bonjour</p><h2>Comment<br><i>commander</i></h2></div><div class="steps-list">{{STEPS}}</div><div class="steps-rule">● ● ●</div><p class="page-quote">“ Trois étapes, zéro complication : c'est tout l'esprit La Crêpière. ”</p></section>
-    <section class="page engagements-page bg-[#ced8c6]" id="engagements" data-page="11"><div class="page-no">11</div><div class="section-heading"><p class="eyebrow">Ce qui compte pour nous</p><h2>Nos<br><i>engagements</i></h2></div><div class="engagement-grid">{{ENGAGEMENTS}}</div><p class="page-quote">“ Chez La Crêpière, chaque commande est préparée à la minute, jamais à l'avance. ”</p></section>
-    <section class="page closing-page bg-[#bb6645] text-[#f9f2e6]" id="closing" data-page="12"><div class="closing-ornament">{{CLOSING_VISUAL}}</div><div class="closing-content"><p class="eyebrow">La suite vous appartient</p><h2>Envie d'y<br><i>goûter ?</i></h2><p>Commandez en un clic,<br>livrées où que vous soyez —<br>encore tièdes.</p><a class="closing-cta" href="https://www.instagram.com/lacrepiereenagnon/" target="_blank" rel="noreferrer">@lacrepiereenagnon <span>↗</span></a></div><div class="closing-footer"><span>lacrepiere.store</span><span>Cotonou · Bénin</span><span>12</span></div><p class="closing-quote">“ Une crêpe réussie doit pouvoir se retourner<br>d'un seul geste du poignet. ”</p></section>
+    <section class="page steps-page bg-[#e6d5c6]" id="steps" data-page="10">
+      <div class="page-watermark" aria-hidden="true"><img class="wm-photo wm-photo-b" src="/images/product9.jpeg"
+          alt=""><span class="wm-blob wm-blob-a"></span></div>
+      <div class="section-heading">
+        <p class="eyebrow">Simple comme bonjour</p>
+        <h2>Comment<br><i>commander</i></h2>
+      </div>
+      <div class="steps-list">{{STEPS}}</div>
+      <div class="steps-rule">● ● ●</div>
+      <p class="page-quote">“ Trois étapes, zéro complication : c'est tout l'esprit La Crêpière. ”</p>
+    </section>
+    <section class="page engagements-page bg-[#ced8c6]" id="engagements" data-page="11">
+      <div class="page-watermark" aria-hidden="true"><img class="wm-photo wm-photo-c" src="/images/event03.jpeg"
+          alt=""><svg class="wm-swirl wm-swirl-b" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 20c50 0 80 40 80 80s-40 80-80 80-80-35-80-75c0-30 25-50 50-45 20 4 30 21 20 36"
+            stroke="currentColor" stroke-width="1.4" />
+        </svg></div>
+      <div class="section-heading">
+        <p class="eyebrow">Ce qui compte pour nous</p>
+        <h2>Nos<br><i>engagements</i></h2>
+      </div>
+      <div class="engagement-grid">{{ENGAGEMENTS}}</div>
+      <p class="page-quote">“ Chez La Crêpière, chaque commande est préparée à la minute, jamais à l'avance. ”</p>
+    </section>
+    <section class="page closing-page bg-[#bb6645] text-[#f9f2e6]" id="closing" data-page="12">
+      <div class="page-watermark" aria-hidden="true"><span class="wm-word wm-word-b">Merci</span><svg
+          class="wm-swirl wm-swirl-c" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 20c50 0 80 40 80 80s-40 80-80 80-80-35-80-75c0-30 25-50 50-45 20 4 30 21 20 36"
+            stroke="currentColor" stroke-width="1.4" />
+        </svg></div>
+      <div class="closing-ornament">{{CLOSING_VISUAL}}</div>
+      <div class="closing-content">
+        <p class="eyebrow">La suite vous appartient</p>
+        <h2>Envie d'y<br><i>goûter ?</i> 😋</h2>
+        <p>Commandez en un clic,<br>livrées où que vous soyez —<br>encore tièdes.</p><a class="closing-cta"
+          href="https://www.instagram.com/lacrepiere_eg?stkn=MXhxbmNhZzlyMzdtaQ%3D%3D&utm_source=qr" target="_blank"
+          rel="noreferrer">@lacrepiere_enagnon <span>↗</span></a> <br> <br>
+          <a class="closing-cta"
+          href="https://lacrepiere.netlify.app/" target="_blank"
+          rel="noreferrer">La Crêpière <span>↗</span></a>
+        <p class="closing-quote">“ Une crêpe réussie doit pouvoir se retourner<br>d'un seul geste du poignet. ”</p>
+      </div>
+      <div class="closing-footer"><span>lacrepiere.store</span><span>Cotonou · Bénin</span></div>
+    </section>
   </div>
-  <div class="book-controls"><button class="book-nav previous" aria-label="Page précédente">←</button><span class="book-hint">Feuilletez le livre</span><button class="book-nav next" aria-label="Page suivante">→</button></div>
-  <div class="page-indicator"><span class="current-page">01</span><span class="indicator-line"></span><span>12</span></div>
+  <div class="book-controls"><button class="book-nav previous" aria-label="Page précédente">←</button><span
+      class="book-hint">Feuilletez le livre</span><button class="book-nav next" aria-label="Page suivante">→</button>
+  </div>
+  <div class="page-indicator"><span class="current-page">01</span><span class="indicator-line"></span><span>12</span>
+  </div>
 </main>
