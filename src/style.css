@@ -139,6 +139,42 @@ a {
 .product-page.strawberry {
   background: #eedfd6;
 }
+.product-page.mille {
+  background: #e9ded0;
+}
+.product-page.buche {
+  background: #f1e1d6;
+}
+.product-page.beignet {
+  background: #f5ecd8;
+}
+.product-page.galette {
+  background: #e3e8d6;
+}
+.product-page.rose {
+  background: #f3dde0;
+}
+.product-page.combo {
+  background: #f0ddd6;
+}
+.product-page.bananadeluxe {
+  background: #eee3cf;
+}
+.product-page.nature {
+  background: #f2ecdd;
+}
+.product-page.popcorn {
+  background: #f5e6c8;
+}
+.product-page.platter-page {
+  background: #e9dfd0;
+}
+.product-page.plateau-sale {
+  background: #e3e8d6;
+}
+.product-page.plateau-exotique {
+  background: #f5ecd8;
+}
 .product-catalog-page {
   position: relative;
   padding: 9vw 8vw 86px;
@@ -382,9 +418,7 @@ a {
   text-transform: uppercase;
 }
 .eyebrow span,
-.offer-kicker,
-.price span,
-.ingredients span {
+.offer-kicker {
   color: var(--clay);
 }
 h1,
@@ -646,7 +680,6 @@ h2 i,
   grid-column: 1;
   grid-row: 1;
   z-index: 2;
-  padding-top: 4vw;
 }
 .product-copy h2 {
   margin: 0 0 30px;
@@ -655,33 +688,6 @@ h2 i,
   max-width: 430px;
   font-size: 15px;
   line-height: 1.65;
-}
-.ingredients {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 45px;
-  font: 10px var(--mono);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-.ingredients strong {
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0;
-  text-transform: none;
-}
-.price {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  margin-top: 42px;
-}
-.price strong {
-  font: 600 43px var(--sans);
-}
-.price small {
-  font: 10px var(--mono);
 }
 .visual-wrap {
   position: relative;
@@ -751,6 +757,11 @@ h2 i,
   max-width: 280px;
   text-align: right;
 }
+.product-page.reverse .page-quote {
+  right: auto;
+  left: 7vw;
+  text-align: left;
+}
 .events-page {
   padding: 9vw 8vw 86px;
 }
@@ -818,7 +829,7 @@ h2 i,
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6vw;
-  margin-top: 8vw;
+  margin-top: min(8vw, 9vh);
 }
 .steps-list > div,
 .engagement-grid > div {
@@ -842,7 +853,7 @@ h2 i,
   line-height: 1.5;
 }
 .steps-rule {
-  margin-top: 8vw;
+  margin-top: min(8vw, 6vh);
   color: var(--clay);
   letter-spacing: 6px;
 }
@@ -853,7 +864,9 @@ h2 i,
   font-size: 29px;
 }
 .closing-page {
-  padding: 11vw 13vw 4vw;
+  display: flex;
+  flex-direction: column;
+  padding: min(11vw, 12vh) 13vw 4vw;
 }
 .closing-content {
   position: relative;
@@ -864,14 +877,14 @@ h2 i,
 }
 .closing-content h2 {
   margin: 0;
-  font-size: clamp(70px, 11vw, 160px);
+  font-size: clamp(70px, min(11vw, 14vh), 160px);
 }
 .closing-content h2 i {
   color: #f5c9ae;
 }
 .closing-content > p {
   max-width: 460px;
-  margin: 43px 0;
+  margin: min(43px, 4vh) 0;
   font: 18px/1.45 var(--sans);
 }
 .closing-ornament {
@@ -901,15 +914,13 @@ h2 i,
 }
 .closing-quote {
   max-width: 340px;
-  margin-top: 34px;
+  margin-top: min(34px, 3vh);
   opacity: 0.82;
 }
 .closing-footer {
-  position: absolute;
-  right: 13vw;
-  bottom: 4vw;
-  left: 13vw;
   display: flex;
+  margin-top: auto;
+  padding-top: 12px;
   justify-content: space-between;
   font: 10px var(--mono);
   letter-spacing: 0.1em;
@@ -963,6 +974,41 @@ h2 i,
   height: 1px;
   background: var(--ink);
 }
+/* Pages au contenu long : défilement interne plutôt que bas coupé */
+.contents-page,
+.story-page,
+.steps-page,
+.engagements-page,
+.closing-page {
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.contents-page::-webkit-scrollbar,
+.story-page::-webkit-scrollbar,
+.steps-page::-webkit-scrollbar,
+.engagements-page::-webkit-scrollbar,
+.closing-page::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 721px) {
+  .contents-page .section-heading h2 {
+    font-size: clamp(54px, min(8vw, 13vh), 115px);
+  }
+  .contents-list {
+    width: min(1040px, 100%);
+    columns: 2;
+    column-gap: 56px;
+  }
+  .contents-list a {
+    break-inside: avoid;
+    border-top: 0;
+    border-bottom: 1px solid rgba(39, 53, 44, 0.2);
+    padding: clamp(6px, 1.2vh, 12px) 0;
+  }
+  .contents-list strong {
+    font-size: clamp(16px, 2.4vh, 21px);
+  }
+}
 @media (max-width: 720px) {
   .page {
     padding: 105px 25px 75px;
@@ -1005,10 +1051,14 @@ h2 i,
   }
   .contents-list {
     width: 100%;
-    margin-top: 65px;
+    margin-top: 30px;
+  }
+  .contents-list a {
+    grid-template-columns: 34px 1fr 28px;
+    padding: 8px 0;
   }
   .contents-list strong {
-    font-size: 17px;
+    font-size: 15px;
   }
   .catalog-heading { position: static; width: 100%; }
   .catalog-heading h2 { font-size: 57px; }
@@ -1022,15 +1072,15 @@ h2 i,
   .catalog-card small { font-size: 8px; }
   .story-body {
     width: 93%;
-    margin: 55px 0 0 7%;
-    font-size: 15px;
+    margin: 35px 0 0 7%;
+    font-size: 14px;
   }
   .story-photo {
     position: static;
     display: block;
     width: 78%;
-    height: 220px;
-    margin: 105px 0 0 7%;
+    height: 200px;
+    margin: 40px 0 0 7%;
     transform: rotate(-3deg);
   }
   .story-event {
@@ -1054,7 +1104,7 @@ h2 i,
   .steps-page .page-quote,
   .engagements-page .page-quote {
     position: static;
-    margin-top: 55px;
+    margin-top: 35px;
   }
   .product-page {
     display: flex;
@@ -1072,12 +1122,6 @@ h2 i,
   .description {
     font-size: 14px;
   }
-  .ingredients {
-    margin-top: 28px;
-  }
-  .price {
-    margin-top: 28px;
-  }
   .visual-wrap {
     height: 320px;
     margin-top: -10px;
@@ -1089,22 +1133,24 @@ h2 i,
     border-width: 6px;
     border-radius: 12px;
   }
-  .product-page .page-quote {
+  .product-page .page-quote,
+  .product-page.reverse .page-quote {
     position: static;
     margin: 10px 0 0 auto;
+    text-align: right;
   }
   .steps-list,
   .engagement-grid {
     grid-template-columns: 1fr;
-    gap: 35px;
-    margin-top: 70px;
+    gap: 24px;
+    margin-top: 40px;
   }
   .steps-list h3,
   .engagement-grid h3 {
     margin: 18px 0 10px;
   }
   .steps-rule {
-    margin-top: 65px;
+    margin-top: 35px;
   }
   .events-page { padding: 105px 25px 75px; }
   .events-heading { position: static; width: 100%; }
@@ -1129,9 +1175,6 @@ h2 i,
     font-size: 16px;
   }
   .closing-footer {
-    right: 25px;
-    bottom: 25px;
-    left: 25px;
     gap: 15px;
     font-size: 8px;
   }
