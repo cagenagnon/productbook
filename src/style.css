@@ -93,6 +93,73 @@ a {
   line-height: 1;
   cursor: pointer;
 }
+.secret-btn {
+  width: 26px;
+  height: 26px;
+  border: 0;
+  background: transparent;
+  color: var(--clay);
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.secret-btn:hover,
+.secret-btn:focus-visible {
+  opacity: 1;
+}
+.secret-dialog {
+  width: min(340px, calc(100vw - 32px));
+  border: 1px solid var(--ink);
+  border-radius: 18px;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 26px 24px 22px;
+  box-shadow: 0 24px 60px rgba(53, 42, 30, 0.25);
+}
+.secret-dialog::backdrop {
+  background: rgba(39, 53, 44, 0.35);
+  backdrop-filter: blur(3px);
+}
+.secret-form label {
+  display: block;
+  margin-bottom: 8px;
+  font: 500 22px var(--sans);
+}
+.secret-form input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  background: transparent;
+  padding: 8px 2px;
+  color: var(--ink);
+  font: 22px var(--mono);
+  letter-spacing: 0.5em;
+  outline: none;
+}
+.secret-form input:focus {
+  border-color: var(--clay);
+}
+.secret-error {
+  margin: 10px 0 0;
+  color: var(--clay);
+  font: 12px var(--mono);
+}
+.secret-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 22px;
+}
+.secret-cancel {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: 10px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
 .bp-link {
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;

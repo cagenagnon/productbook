@@ -432,6 +432,7 @@ previousButton.addEventListener("click", () =>
   showPage(currentPage - 1, "previous"),
 );
 document.addEventListener("keydown", (event) => {
+  if (event.target.closest?.("input, dialog")) return;
   if (event.key === "ArrowRight" || event.key === " ")
     showPage(currentPage + 1);
   if (event.key === "ArrowLeft") showPage(currentPage - 1, "previous");
@@ -453,3 +454,25 @@ document.querySelectorAll("[data-target]").forEach((button) =>
     showPage(targetIndex, targetIndex > currentPage ? "next" : "previous");
   }),
 );
+
+// Accès discret au carnet d'idées de contenu : bouton visible au survol, protégé par un code.
+const SECRET_CODE = "2105";
+const SECRET_URL = "/idees-contenu-lc.html";
+const secretDialog = document.querySelector("[data-secret-dialog]");
+const secretInput = secretDialog.querySelector("input");
+const secretError = secretDialog.querySelector("[data-secret-error]");
+document.querySelector("[data-secret]").addEventListener("click", () => {
+  secretInput.value = "";
+  secretError.hidden = true;
+  secretDialog.showModal();
+});
+secretDialog.querySelector("[data-secret-cancel]").addEventListener("click", () => secretDialog.close());
+secretDialog.querySelector("[data-secret-form]").addEventListener("submit", (event) => {
+  if (secretInput.value.trim() === SECRET_CODE) {
+    window.location.href = SECRET_URL;
+    return;
+  }
+  event.preventDefault();
+  secretError.hidden = false;
+  secretInput.select();
+});

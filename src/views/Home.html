@@ -3,9 +3,23 @@
     <nav class="topbar flex items-center justify-between px-[5vw] py-5 md:py-7">
       <a class="brand" href="#cover" aria-label="Retour à la couverture"><img src="/logo/logo crèpière (2).png"
           alt="La Crêpière Enagnon"></a>
-      <div class="topbar-meta flex items-center gap-3 md:gap-7"><span class="hidden md:inline">Cotonou ·
+      <div class="topbar-meta flex items-center gap-3 md:gap-7"><button class="secret-btn" type="button"
+          aria-label="Contenu caché" data-secret>✦</button><span class="hidden md:inline">Cotonou ·
           Bénin</span><a class="bp-link" href="/business-plan.html">Business Plan</a><button class="order-btn" data-target="closing">Commander <span>↗</span></button></div>
     </nav>
+
+    <dialog class="secret-dialog" data-secret-dialog>
+      <form method="dialog" class="secret-form" data-secret-form>
+        <p class="eyebrow"><span>✦</span> Contenu caché</p>
+        <label for="secret-code">Code d'accès</label>
+        <input id="secret-code" type="password" inputmode="numeric" maxlength="4" autocomplete="off" required>
+        <p class="secret-error" data-secret-error hidden>Code incorrect.</p>
+        <div class="secret-actions">
+          <button type="button" class="secret-cancel" data-secret-cancel>Annuler</button>
+          <button type="submit" class="order-btn">Entrer <span>→</span></button>
+        </div>
+      </form>
+    </dialog>
 
     <section class="page cover-page bg-[#f5efe5]" id="cover" data-page="01">
       <div class="cover-wash wash-one"></div>

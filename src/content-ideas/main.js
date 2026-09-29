@@ -55,7 +55,9 @@ const idea = (i, n) => `
       <div class="phone">
         <video src="/videos/${i.video}.mp4" poster="/videos/${i.video}.jpg" muted loop playsinline preload="none"
           aria-label="Aperçu storyboard : ${i.title} ${i.accent}"></video>
-        <button class="phone-sound" type="button" data-play aria-label="Lire / mettre en pause">❚❚</button>
+        <a class="phone-btn phone-dl" href="/videos/${i.video}.mp4" download="la-crepiere-${i.video}.mp4"
+          aria-label="Télécharger la vidéo" title="Télécharger la vidéo">↓</a>
+        <button class="phone-btn phone-sound" type="button" data-play aria-label="Lire / mettre en pause">❚❚</button>
       </div>
       <p class="phone-note">Aperçu animé du storyboard — le vrai tournage se fait sur place.</p>
     </div>
